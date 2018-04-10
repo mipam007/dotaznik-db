@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM rhscl/centos:latest
 
 MAINTAINER Jindřich Káňa <jindrich.kana@gmail.com>
 LABEL Vendor="ELOS Technologies s.r.o."
