@@ -10,10 +10,10 @@ ADD https://raw.githubusercontent.com/tmobil-demo/dotaznik-db/master/setupdb.sh 
 ADD https://raw.githubusercontent.com/tmobil-demo/dotaznik-db/master/my.cnf /etc
 ADD https://raw.githubusercontent.com/tmobil-demo/dotaznik-db/master/setupdb.sql /opt
 
-RUN mysql_install_db
+RUN mysql_install_db --user=mysql
 
 RUN bash /opt/setupdb.sh
 
 EXPOSE 3306
 
-CMD ["/usr/bin/mysqld_safe"]
+CMD ["/usr/bin/mysqld_safe", "--datadir=/var/lib/mysql", "--user=mysql"]
