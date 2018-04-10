@@ -13,6 +13,8 @@ ADD https://raw.githubusercontent.com/tmobil-demo/dotaznik-db/master/setupdb.sql
 RUN mysql_install_db --user=mysql
 
 RUN bash /opt/setupdb.sh
+RUN chmown -R mysql: /var/lib/mysql \
+    && chmod -R 0777 /var/lib/mysql
 
 EXPOSE 3306
 
