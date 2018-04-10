@@ -10,7 +10,7 @@ ADD https://raw.githubusercontent.com/tmobil-demo/dotaznik-db/master/setupdb.sh 
 ADD https://raw.githubusercontent.com/tmobil-demo/dotaznik-db/master/my.cnf /etc
 ADD https://raw.githubusercontent.com/tmobil-demo/dotaznik-db/master/setupdb.sql /opt
 
-RUN mysql_install_db --user=mysql
+RUN mysql_install_db
 
 RUN bash /opt/setupdb.sh
 
