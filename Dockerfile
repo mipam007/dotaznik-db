@@ -6,9 +6,9 @@ LABEL Vendor="ELOS Technologies s.r.o."
 RUN yum install -y --setopt=tsflags=nodocs mariadb-server \
     && yum clean all
 
-ADD https://raw.githubusercontent.com/tmobil-demo/dotaznik-db/master/setupdb.sh /opt
-ADD https://raw.githubusercontent.com/tmobil-demo/dotaznik-db/master/my.cnf /etc
-ADD https://raw.githubusercontent.com/tmobil-demo/dotaznik-db/master/setupdb.sql /opt
+ADD https://raw.githubusercontent.com/mipam007/dotaznik-db/master/setupdb.sh /opt
+ADD https://raw.githubusercontent.com/mipam007/dotaznik-db/master/my.cnf /etc
+ADD https://raw.githubusercontent.com/mipam007/dotaznik-db/master/setupdb.sql /opt
 
 RUN mysql_install_db --user=mysql
 
