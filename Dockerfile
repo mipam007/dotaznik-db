@@ -19,4 +19,7 @@ RUN chown -R mysql: /var/lib/mysql \
 
 EXPOSE 3306
 
+RUN /usr/bin/cat /etc/my.cnf > /tmp/my.cnf \
+    && chmod 0777 /tmp/my.cnf
+
 CMD ["/usr/bin/mysqld_safe", "--datadir=/var/lib/mysql", "--user=mysql"]
