@@ -1,4 +1,4 @@
-FROM rhscl/centos:latest
+FROM docker-registry-default.rocp.vs.csint.cz/rhscl/centos
 
 MAINTAINER Jindřich Káňa <jindrich.kana@gmail.com>
 LABEL Vendor="ELOS Technologies s.r.o."
