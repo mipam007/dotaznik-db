@@ -1,5 +1,5 @@
-FROM docker-registry-default.rocp.vs.csint.cz/rhscl/centos
-#FROM centos:7
+#FROM docker-registry-default.rocp.vs.csint.cz/rhscl/centos
+FROM centos:7
 
 MAINTAINER Jindřich Káňa <jindrich.kana@gmail.com>
 LABEL Vendor="ELOS Technologies s.r.o."
