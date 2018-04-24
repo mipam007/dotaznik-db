@@ -13,5 +13,7 @@ CREATE USER 'hodnoceni'@'%' IDENTIFIED BY 'hodnoceni';
 CREATE USER 'hodnoceni'@'localhost' IDENTIFIED BY 'hodnoceni';
 CREATE USER 'hodnoceni'@'127.0.0.1' IDENTIFIED BY 'hodnoceni';
 GRANT ALL ON reviews.* TO 'hodnoceni'@'%';
+GRANT ALL ON reviews.* TO 'hodnoceni'@'127.0.0.1';
+GRANT ALL ON reviews.* TO 'hodnoceni'@'locahost';
 
 FLUSH PRIVILEGES;
