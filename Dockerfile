@@ -12,16 +12,22 @@ ADD https://raw.githubusercontent.com/mipam007/dotaznik-db/master/my.cnf /etc
 ADD https://raw.githubusercontent.com/mipam007/dotaznik-db/master/setupdb.sql /opt
 
 RUN mysql_install_db --user=mysql
-
 RUN bash /opt/setupdb.sh
+
 RUN chown -R mysql: /var/lib/mysql \
-    && chmod -R 0777 /var/lib/mysql
+    && chmod -R 0750 /var/lib/mysql \
+    && touch /var/log/mariadb/error.log \
+    && touch /var/log/mariadb/general.log \
+    && chown -R mysql: /var/log/mariadb \
+    && chmod -R 0750 /var/log/mariadb \
+    && ln -sf /dev/stdout /var/log/mariadb/general.log \
+    && ln -sf /dev/stderr /var/log/mariadb/error.log \
+# tests
+    && ls -lah /var/lib/mysql > /tmp/mariadb-lib_mysql \
+    && ls -lah /var/log/mariadb > /tmp/mariadb-log_mariadb
 
 EXPOSE 3306
 
-RUN /usr/bin/cat /etc/my.cnf > /tmp/my.cnf \
-    && chmod 0777 /tmp/my.cnf
-    && ln -sf /dev/stdout /var/log/mariadb/general.log \
-    && ln -sf /dev/stderr /var/log/mariadb/error.log
+USER mysql
 
 CMD ["/usr/bin/mysqld_safe", "--datadir=/var/lib/mysql", "--user=mysql"]
