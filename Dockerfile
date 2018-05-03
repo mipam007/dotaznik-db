@@ -19,9 +19,9 @@ RUN chown -R mysql: /var/lib/mysql \
     && touch /var/log/mariadb/error.log \
     && touch /var/log/mariadb/general.log \
     && chown -R mysql: /var/log/mariadb \
-    && chmod -R 0750 /var/log/mariadb 
+    && chmod -R 0750 /var/log/mariadb \
     && ln -sf /dev/stdout /var/log/mariadb/general.log \
-    && ln -sf /dev/stderr /var/log/mariadb/error.log \
+    && ln -sf /dev/stderr /var/log/mariadb/error.log 
 
 EXPOSE 3306
 
