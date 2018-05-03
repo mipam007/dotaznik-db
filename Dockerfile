@@ -27,4 +27,4 @@ EXPOSE 3306
 
 USER mysql
 
-CMD ["/usr/bin/mysqld_safe", "--datadir=/var/lib/mysql", "--user=mysql"]
+ENTRYPOINT ["/usr/bin/mysqld_safe", "--datadir=/var/lib/mysql", "--user=mysql"]
