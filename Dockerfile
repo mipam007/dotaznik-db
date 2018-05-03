@@ -27,4 +27,4 @@ EXPOSE 3306
 
 USER mysql
 
-ENTRYPOINT ["/usr/bin/mysqld_safe", "--datadir=/var/lib/mysql", "--user=mysql", "--defaults-file=/etc/my.cnf"]
+ENTRYPOINT ["/usr/bin/mysqld_safe", "--defaults-file=/etc/my.cnf", "--datadir=/var/lib/mysql", "--user=mysql"]
