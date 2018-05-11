@@ -28,5 +28,4 @@ EXPOSE 3306
 
 USER mysql
 
-ENTRYPOINT ["/usr/bin/mysqld_safe", "--datadir=/var/lib/mysql", "--user=mysql", "--skip-syslog"]
-CMD [""]
+ENTRYPOINT ["/usr/bin/mysqld_safe", "--datadir=/var/lib/mysql", "--user=mysql"]

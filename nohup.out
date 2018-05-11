@@ -1,0 +1,36 @@
+2018-05-11 15:33:30 140092167801024 [Note] /usr/libexec/mysqld (mysqld 10.2.14-MariaDB) starting as process 18103 ...
+2018-05-11 15:33:30 140092167801024 [Warning] Changed limits: max_open_files: 1024  max_connections: 151  table_cache: 431
+2018-05-11 15:33:30 140092167801024 [Warning] Can't create test file /var/lib/mysql/jindrovo.lower-test
+2018-05-11 15:33:30 140092167801024 [ERROR] RocksDB: Error listing column families, Status Code: 5, Status: IO error: While opening a file for sequentially reading: ./#rocksdb/CURRENT: Permission denied
+2018-05-11 15:33:30 140092167801024 [ERROR] Plugin 'ROCKSDB' init function returned error.
+2018-05-11 15:33:30 140092167801024 [ERROR] Plugin 'ROCKSDB' registration as a STORAGE ENGINE failed.
+2018-05-11 15:33:30 140092167801024 [ERROR] TokuDB is not initialized because jemalloc is not loaded
+2018-05-11 15:33:30 140092167801024 [ERROR] Plugin 'TokuDB' init function returned error.
+2018-05-11 15:33:30 140092167801024 [ERROR] Plugin 'TokuDB' registration as a STORAGE ENGINE failed.
+2018-05-11 15:33:30 140092167801024 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2018-05-11 15:33:30 140092167801024 [Note] InnoDB: Uses event mutexes
+2018-05-11 15:33:30 140092167801024 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2018-05-11 15:33:30 140092167801024 [Note] InnoDB: Using Linux native AIO
+2018-05-11 15:33:30 140092167801024 [Note] InnoDB: Number of pools: 1
+2018-05-11 15:33:30 140092167801024 [Note] InnoDB: Using SSE2 crc32 instructions
+2018-05-11 15:33:30 140092167801024 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2018-05-11 15:33:30 140092167801024 [Note] InnoDB: Completed initialization of buffer pool
+2018-05-11 15:33:30 140091520210688 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2018-05-11 15:33:30 140092167801024 [ERROR] InnoDB: The innodb_system data file 'ibdata1' must be writable
+2018-05-11 15:33:30 140092167801024 [ERROR] InnoDB: The innodb_system data file 'ibdata1' must be writable
+2018-05-11 15:33:30 140092167801024 [ERROR] InnoDB: Plugin initialization aborted with error Generic error
+2018-05-11 15:33:30 140092167801024 [Note] InnoDB: Starting shutdown...
+2018-05-11 15:33:30 140092167801024 [ERROR] Plugin 'InnoDB' init function returned error.
+2018-05-11 15:33:30 140092167801024 [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.
+2018-05-11 15:33:30 140092167801024 [ERROR] mysqld: File '/var/lib/mysql/aria_log_control' not found (Errcode: 13 "Permission denied")
+2018-05-11 15:33:30 140092167801024 [ERROR] mysqld: Got error 'Can't open file' when trying to use aria control file '/var/lib/mysql/aria_log_control'
+2018-05-11 15:33:30 140092167801024 [ERROR] Plugin 'Aria' init function returned error.
+2018-05-11 15:33:30 140092167801024 [ERROR] Plugin 'Aria' registration as a STORAGE ENGINE failed.
+2018-05-11 15:33:30 140092167801024 [Note] Plugin 'FEEDBACK' is disabled.
+2018-05-11 15:33:30 140092167801024 [Warning] mysqld: GSSAPI plugin : default principal 'mariadb/jindrovo@' not found in keytab
+2018-05-11 15:33:30 140092167801024 [ERROR] mysqld: Server GSSAPI error (major 851968, minor 2529639093) : gss_acquire_cred failed -Unspecified GSS failure.  Minor code may provide more information. Keytab FILE:/etc/krb5.keytab is nonexistent or empty. 
+2018-05-11 15:33:30 140092167801024 [ERROR] Plugin 'gssapi' init function returned error.
+2018-05-11 15:33:30 140092167801024 [ERROR] Could not open mysql.plugin table. Some plugins may be not loaded
+2018-05-11 15:33:30 140092167801024 [ERROR] Unknown/unsupported storage engine: InnoDB
+2018-05-11 15:33:30 140092167801024 [ERROR] Aborting
+
