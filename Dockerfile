@@ -18,7 +18,7 @@ RUN chown -R mysql: /var/lib/mysql \
     && chmod -R 0777 /var/lib/mysql \
     && touch /var/log/mariadb/error.log \
     && touch /var/log/mariadb/general.log \
-    && chown -R mysql: /var/log/mariadb /opt /etc/my.cnf \
+    && chown -R mysql: /var/log/mariadb /opt /etc/my.cnf /var/run/mariadb \
     && chmod -R 0777 /var/log/mariadb \
     && chmod -R 0644 /etc/my.cnf \
     && ln -sf /dev/stdout /var/log/mariadb/general.log \

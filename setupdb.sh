@@ -10,4 +10,6 @@ sleep 5s
 
 kill -9 $(pgrep mysql)
 
+rm /var/run/mariadb/mariadb.pid
+
 sleep 5s
